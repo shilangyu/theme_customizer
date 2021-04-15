@@ -2,6 +2,8 @@
 
 TODO
 
+Inspired by [panache](https://github.com/rxlabz/panache)
+
 Downsides:
 
 - Look is not customizable

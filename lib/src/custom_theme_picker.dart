@@ -26,11 +26,14 @@ class CustomThemePicker extends StatelessWidget {
       theme: _theme,
       child: Builder(
         builder: (context) {
+          final customTheme = CustomThemeProvider.of(context).theme;
+
           return Theme(
-            data: CustomThemeProvider.of(context).theme.toThemeData(),
+            data: customTheme.toThemeData(),
             child: DefaultTabController(
               length: _previewTabs.length,
               child: Scaffold(
+                extendBody: true,
                 appBar: AppBar(
                   leading: Builder(
                     builder: (context) {
@@ -40,6 +43,12 @@ class CustomThemePicker extends StatelessWidget {
                       );
                     },
                   ),
+                  actions: [
+                    IconButton(
+                      icon: Icon(Icons.save),
+                      onPressed: () => Navigator.of(context).pop(customTheme),
+                    ),
+                  ],
                   bottom: TabBar(
                     tabs: [
                       for (final tab in _previewTabs)
@@ -63,6 +72,34 @@ class CustomThemePicker extends StatelessWidget {
                   ),
                 ),
                 body: TabBarView(children: _previewTabs),
+                bottomNavigationBar: BottomAppBar(
+                  shape: const CircularNotchedRectangle(),
+                  child: Row(
+                    children: [
+                      IconButton(
+                        tooltip: 'Open navigation menu',
+                        icon: const Icon(Icons.menu),
+                        onPressed: () {},
+                      ),
+                      IconButton(
+                        tooltip: 'Search',
+                        icon: const Icon(Icons.search),
+                        onPressed: () {},
+                      ),
+                      IconButton(
+                        tooltip: 'Favorite',
+                        icon: const Icon(Icons.favorite),
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
+                ),
+                floatingActionButtonLocation:
+                    FloatingActionButtonLocation.endDocked,
+                floatingActionButton: FloatingActionButton(
+                  onPressed: () {},
+                  child: Icon(Icons.add),
+                ),
               ),
             ),
           );
