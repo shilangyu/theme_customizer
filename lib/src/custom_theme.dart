@@ -210,19 +210,6 @@ TODO
     VisualDensity? visualDensity,
     MaterialColor? primarySwatch,
     Brightness? primaryColorBrightness,
-    Color? primaryColorLight,
-    Color? primaryColorDark,
-    Color? accentColor,
-    Color? selectedRowColor,
-    Color? unselectedWidgetColor,
-    Color? disabledColor,
-    Color? buttonColor,
-    Color? secondaryHeaderColor,
-    Color? dialogBackgroundColor,
-    Color? indicatorColor,
-    Color? hintColor,
-    Color? errorColor,
-    Color? toggleableActiveColor,
     Brightness? accentColorBrightness,
     InteractiveInkFeatureFactory? splashFactory,
     ButtonThemeData? buttonTheme,
@@ -271,3 +258,54 @@ TODO
     SwitchThemeData? switchTheme,
     bool? fixTextFieldOutlineLabel,
  */
+
+class CustomThemeProvider extends InheritedWidget {
+  const CustomThemeProvider({
+    Key? key,
+    required this.theme,
+    required this.update,
+    required Widget child,
+  }) : super(key: key, child: child);
+
+  final CustomTheme theme;
+  final void Function(VoidCallback) update;
+
+  static CustomThemeProvider of(BuildContext context) {
+    final result =
+        context.dependOnInheritedWidgetOfExactType<CustomThemeProvider>();
+    assert(result != null, 'No CustomThemeProvider found in context');
+    return result!;
+  }
+
+  @override
+  bool updateShouldNotify(CustomThemeProvider old) => true;
+}
+
+class CustomThemeContainer extends StatefulWidget {
+  const CustomThemeContainer({
+    Key? key,
+    required this.theme,
+    required this.child,
+  }) : super(key: key);
+
+  final CustomTheme theme;
+  final Widget child;
+
+  @override
+  _CustomThemeContainerState createState() => _CustomThemeContainerState();
+}
+
+class _CustomThemeContainerState extends State<CustomThemeContainer> {
+  void _update(VoidCallback callback) {
+    setState(callback);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomThemeProvider(
+      theme: widget.theme,
+      update: _update,
+      child: widget.child,
+    );
+  }
+}
