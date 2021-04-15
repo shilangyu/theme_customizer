@@ -3,6 +3,7 @@ import 'package:theme_customizer/src/editor/color_edit_section.dart';
 import 'package:theme_customizer/src/editor/edit_section.dart';
 import 'package:theme_customizer/src/preview/buttons_preview_tab.dart';
 import 'package:theme_customizer/src/preview/controls_preview_tab.dart';
+import 'package:theme_customizer/src/preview/inputs_preview_tab.dart';
 import 'package:theme_customizer/src/preview/preview_tab.dart';
 
 import 'custom_theme.dart';
@@ -17,6 +18,7 @@ class CustomThemePicker extends StatelessWidget {
   final List<PreviewTab> _previewTabs = [
     ButtonsPreviewTab(),
     ControlsPreviewTab(),
+    InputsPreviewTab(),
   ];
   final List<EditSection> _editSections = [
     ColorEditSection(),
