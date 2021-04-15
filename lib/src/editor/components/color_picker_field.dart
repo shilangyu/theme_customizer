@@ -17,44 +17,27 @@ class ColorPickerField extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(title),
+      trailing: Container(
+        width: 30,
+        height: 30,
+        color: color,
+      ),
       onTap: () => showDialog<void>(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text('Pick a color!'),
+          title: Text(title),
           content: SingleChildScrollView(
             child: ColorPicker(
               pickerColor: color,
               onColorChanged: onChanged,
-              // showLabel: true,
-              // pickerAreaHeightPercent: 0.8,
             ),
-            // Use Material color picker:
-            //
-            // child: MaterialPicker(
-            //   pickerColor: pickerColor,
-            //   onColorChanged: changeColor,
-            //   showLabel: true, // only on portrait mode
-            // ),
-            //
-            // Use Block color picker:
-            //
-            // child: BlockPicker(
-            //   pickerColor: currentColor,
-            //   onColorChanged: changeColor,
-            // ),
-            //
-            // child: MultipleChoiceBlockPicker(
-            //   pickerColors: currentColors,
-            //   onColorsChanged: changeColors,
-            // ),
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Got it'),
               onPressed: () {
-                // setState(() => currentColor = pickerColor);
                 Navigator.of(context).pop();
               },
+              child: const Text('OK'),
             ),
           ],
         ),
