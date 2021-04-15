@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:theme_customizer/src/editor/color_edit_section.dart';
 import 'package:theme_customizer/src/editor/edit_section.dart';
 import 'package:theme_customizer/src/preview/buttons_preview_tab.dart';
+import 'package:theme_customizer/src/preview/controls_preview_tab.dart';
 import 'package:theme_customizer/src/preview/preview_tab.dart';
 
 import 'custom_theme.dart';
@@ -15,6 +16,7 @@ class CustomThemePicker extends StatelessWidget {
 
   final List<PreviewTab> _previewTabs = [
     ButtonsPreviewTab(),
+    ControlsPreviewTab(),
   ];
   final List<EditSection> _editSections = [
     ColorEditSection(),
@@ -33,7 +35,6 @@ class CustomThemePicker extends StatelessWidget {
             child: DefaultTabController(
               length: _previewTabs.length,
               child: Scaffold(
-                extendBody: true,
                 appBar: AppBar(
                   leading: Builder(
                     builder: (context) {
