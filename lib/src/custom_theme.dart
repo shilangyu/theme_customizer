@@ -27,6 +27,7 @@ class CustomTheme {
   Color selectedRowColor;
   Color unselectedWidgetColor;
   Color disabledColor;
+  // TODO: pretty sure that is deprecated?
   Color buttonColor;
   Color secondaryHeaderColor;
   Color dialogBackgroundColor;
