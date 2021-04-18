@@ -149,6 +149,28 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
             Text('Disabled not picked')
           ],
         ),
+        Text('Slider'),
+        Slider(
+          value: 0.75,
+          onChanged: (val) {},
+        ),
+        Slider(
+          value: 0.75,
+          onChanged: null,
+        ),
+        Slider(
+          value: 0.75,
+          label: 'label',
+          divisions: 5,
+          onChanged: (val) {},
+        ),
+        Slider(
+          value: 0.75,
+          label: 'label',
+          divisions: 5,
+          onChanged: null,
+        ),
+        const SizedBox(height: 20),
       ],
     );
   }
