@@ -59,7 +59,7 @@ class InputsPreviewTab extends StatelessWidget implements PreviewTab {
       children: [
         const Text('Normal'),
         ...buildFields(filled: false),
-        const SizedBox(height: 16),
+        const Divider(),
         const Text('Filled'),
         ...buildFields(filled: true),
       ],

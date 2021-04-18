@@ -43,6 +43,7 @@ class PopupsPreviewTab extends StatelessWidget implements PreviewTab {
           },
           child: const Text('Open a alert dialog'),
         ),
+        const Divider(),
         ElevatedButton(
           onPressed: () {
             showDialog<void>(
@@ -70,6 +71,7 @@ class PopupsPreviewTab extends StatelessWidget implements PreviewTab {
           },
           child: const Text('Open a simple dialog'),
         ),
+        const Divider(),
         ElevatedButton(
           onPressed: () {
             showModalBottomSheet<void>(
@@ -87,6 +89,7 @@ class PopupsPreviewTab extends StatelessWidget implements PreviewTab {
           },
           child: const Text('Open modal bottom sheet'),
         ),
+        const Divider(),
         ElevatedButton(
           onPressed: () {
             showBottomSheet<void>(

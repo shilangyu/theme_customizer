@@ -17,10 +17,11 @@ class IndicatorsPreviewTab extends StatelessWidget implements PreviewTab {
         const Text('Linear progress'),
         const SizedBox(height: 4),
         const LinearProgressIndicator(),
-        const SizedBox(height: 12),
+        const Divider(),
         const Text('Circular progress'),
         const SizedBox(height: 4),
         const Center(child: CircularProgressIndicator()),
+        const Divider(),
         const Text('Snackbar'),
         ElevatedButton(
           onPressed: () => ScaffoldMessenger.of(context).showSnackBar(

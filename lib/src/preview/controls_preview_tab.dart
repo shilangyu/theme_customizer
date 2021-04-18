@@ -71,6 +71,7 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
             Text('Disabled undecided')
           ],
         ),
+        const Divider(),
         const Text('Switch'),
         Row(
           children: [
@@ -108,6 +109,7 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
             Text('Disabled unselected')
           ],
         ),
+        const Divider(),
         const Text('Radio'),
         Row(
           children: [
@@ -149,6 +151,7 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
             Text('Disabled not picked')
           ],
         ),
+        const Divider(),
         const Text('Slider'),
         Slider(
           value: 0.75,

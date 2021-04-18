@@ -43,6 +43,7 @@ class ButtonsPreviewTab extends StatelessWidget implements PreviewTab {
             ),
           ],
         ),
+        const Divider(),
         const Text('Outlined button'),
         Row(
           children: [
@@ -72,6 +73,7 @@ class ButtonsPreviewTab extends StatelessWidget implements PreviewTab {
             ),
           ],
         ),
+        const Divider(),
         const Text('Text button'),
         Row(
           children: [
@@ -101,6 +103,7 @@ class ButtonsPreviewTab extends StatelessWidget implements PreviewTab {
             ),
           ],
         ),
+        const Divider(),
         const Text('Icon button'),
         Row(
           children: [
@@ -116,6 +119,7 @@ class ButtonsPreviewTab extends StatelessWidget implements PreviewTab {
             ),
           ],
         ),
+        const Divider(),
         const Text('Dropdown button'),
         Row(
           children: [
@@ -182,6 +186,7 @@ class ButtonsPreviewTab extends StatelessWidget implements PreviewTab {
             ),
           ],
         ),
+        const Divider(),
         const Text('Popup menu button'),
         PopupMenuButton(
           initialValue: 'harder',
@@ -204,6 +209,7 @@ class ButtonsPreviewTab extends StatelessWidget implements PreviewTab {
             ),
           ],
         ),
+        const Divider(),
         const Text('Toggle buttons'),
         ToggleButtons(
           onPressed: (val) {},
