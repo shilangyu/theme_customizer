@@ -116,6 +116,150 @@ class ButtonsPreviewTab extends StatelessWidget implements PreviewTab {
             ),
           ],
         ),
+        Text('Dropdown button'),
+        Row(
+          children: [
+            SizedBox(
+              width: 200,
+              child: DropdownButton<String>(
+                items: [
+                  DropdownMenuItem(
+                    child: Text('Hello'),
+                    value: 'Hello',
+                  ),
+                  DropdownMenuItem(
+                    child: Text('There'),
+                    value: 'There',
+                  ),
+                ],
+                onChanged: (val) {},
+                isExpanded: true,
+                hint: Text('Dropdown hint'),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            SizedBox(
+              width: 200,
+              child: DropdownButton<String>(
+                items: [
+                  DropdownMenuItem(
+                    child: Text('Hello'),
+                    value: 'Hello',
+                  ),
+                  DropdownMenuItem(
+                    child: Text('There'),
+                    value: 'There',
+                  ),
+                ],
+                onChanged: (val) {},
+                isExpanded: true,
+                value: 'Hello',
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            SizedBox(
+              width: 200,
+              child: DropdownButton<String>(
+                items: [
+                  DropdownMenuItem(
+                    child: Text('Hello'),
+                    value: 'Hello',
+                  ),
+                  DropdownMenuItem(
+                    child: Text('There'),
+                    value: 'There',
+                  ),
+                ],
+                isExpanded: true,
+                hint: Text('Disabled'),
+              ),
+            ),
+          ],
+        ),
+        Text('Popup menu button'),
+        PopupMenuButton(
+          initialValue: 'harder',
+          itemBuilder: (context) => [
+            const PopupMenuItem(
+              value: 'harder',
+              child: Text('Working a lot harder'),
+            ),
+            const PopupMenuItem(
+              value: 'smarter',
+              child: Text('Being a lot smarter'),
+            ),
+            const PopupMenuItem(
+              value: 'selfStarter',
+              child: Text('Being a self-starter'),
+            ),
+            const PopupMenuItem(
+              value: 'tradingCharter',
+              child: Text('Placed in charge of trading charter'),
+            ),
+          ],
+        ),
+        Text('Toggle buttons'),
+        ToggleButtons(
+          onPressed: (val) {},
+          renderBorder: false,
+          children: [
+            Icon(Icons.format_bold),
+            Icon(Icons.format_italic),
+            Icon(Icons.format_underline),
+          ],
+          isSelected: [
+            false,
+            true,
+            false,
+          ],
+        ),
+        const SizedBox(height: 4),
+        ToggleButtons(
+          renderBorder: false,
+          children: [
+            Icon(Icons.format_bold),
+            Icon(Icons.format_italic),
+            Icon(Icons.format_underline),
+          ],
+          isSelected: [
+            false,
+            true,
+            false,
+          ],
+        ),
+        const SizedBox(height: 4),
+        ToggleButtons(
+          onPressed: (val) {},
+          children: [
+            Icon(Icons.format_bold),
+            Icon(Icons.format_italic),
+            Icon(Icons.format_underline),
+          ],
+          isSelected: [
+            false,
+            true,
+            false,
+          ],
+        ),
+        const SizedBox(height: 4),
+        ToggleButtons(
+          children: [
+            Icon(Icons.format_bold),
+            Icon(Icons.format_italic),
+            Icon(Icons.format_underline),
+          ],
+          isSelected: [
+            false,
+            true,
+            false,
+          ],
+        ),
       ],
     );
   }
