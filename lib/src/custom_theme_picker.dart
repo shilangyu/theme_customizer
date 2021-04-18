@@ -5,6 +5,7 @@ import 'package:theme_customizer/src/preview/buttons_preview_tab.dart';
 import 'package:theme_customizer/src/preview/controls_preview_tab.dart';
 import 'package:theme_customizer/src/preview/indicators_preview_tab.dart';
 import 'package:theme_customizer/src/preview/inputs_preview_tab.dart';
+import 'package:theme_customizer/src/preview/popups_preview_tab.dart';
 import 'package:theme_customizer/src/preview/preview_tab.dart';
 
 import 'custom_theme.dart';
@@ -21,6 +22,7 @@ class CustomThemePicker extends StatelessWidget {
     ControlsPreviewTab(),
     InputsPreviewTab(),
     IndicatorsPreviewTab(),
+    PopupsPreviewTab(),
   ];
   final List<EditSection> _editSections = [
     ColorEditSection(),
@@ -55,6 +57,7 @@ class CustomThemePicker extends StatelessWidget {
                     ),
                   ],
                   bottom: TabBar(
+                    isScrollable: true,
                     tabs: [
                       for (final tab in _previewTabs)
                         Tab(
