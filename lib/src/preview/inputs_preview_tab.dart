@@ -23,8 +23,8 @@ class InputsPreviewTab extends StatelessWidget implements PreviewTab {
           decoration: InputDecoration(
             filled: filled,
             prefixText: 'Prefix',
-            prefixIcon: Icon(Icons.phone),
-            suffixIcon: Icon(Icons.phone),
+            prefixIcon: const Icon(Icons.phone),
+            suffixIcon: const Icon(Icons.phone),
             suffixText: 'Suffix',
           ),
         ),
@@ -55,12 +55,12 @@ class InputsPreviewTab extends StatelessWidget implements PreviewTab {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       children: [
-        Text('Normal'),
+        const Text('Normal'),
         ...buildFields(filled: false),
         const SizedBox(height: 16),
-        Text('Filled'),
+        const Text('Filled'),
         ...buildFields(filled: true),
       ],
     );

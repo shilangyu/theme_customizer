@@ -12,129 +12,129 @@ class ButtonsPreviewTab extends StatelessWidget implements PreviewTab {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       children: [
-        Text('Elevated button'),
+        const Text('Elevated button'),
         Row(
           children: [
             ElevatedButton(
               onPressed: () {},
-              child: Text('Button'),
+              child: const Text('Button'),
             ),
             const SizedBox(width: 8),
             ElevatedButton.icon(
               onPressed: () {},
-              label: Text('Button with icon'),
-              icon: Icon(Icons.add_box_rounded),
+              label: const Text('Button with icon'),
+              icon: const Icon(Icons.add_box_rounded),
             ),
           ],
         ),
         Row(
           children: [
-            ElevatedButton(
+            const ElevatedButton(
               onPressed: null,
               child: Text('Disabled'),
             ),
             const SizedBox(width: 8),
             ElevatedButton.icon(
               onPressed: null,
-              label: Text('Disabled with icon'),
-              icon: Icon(Icons.add_box_rounded),
+              label: const Text('Disabled with icon'),
+              icon: const Icon(Icons.add_box_rounded),
             ),
           ],
         ),
-        Text('Outlined button'),
+        const Text('Outlined button'),
         Row(
           children: [
             OutlinedButton(
               onPressed: () {},
-              child: Text('Button'),
+              child: const Text('Button'),
             ),
             const SizedBox(width: 8),
             OutlinedButton.icon(
               onPressed: () {},
-              label: Text('Button with icon'),
-              icon: Icon(Icons.add_box_rounded),
+              label: const Text('Button with icon'),
+              icon: const Icon(Icons.add_box_rounded),
             ),
           ],
         ),
         Row(
           children: [
-            OutlinedButton(
+            const OutlinedButton(
               onPressed: null,
               child: Text('Disabled'),
             ),
             const SizedBox(width: 8),
             OutlinedButton.icon(
               onPressed: null,
-              label: Text('Disabled with icon'),
-              icon: Icon(Icons.add_box_rounded),
+              label: const Text('Disabled with icon'),
+              icon: const Icon(Icons.add_box_rounded),
             ),
           ],
         ),
-        Text('Text button'),
+        const Text('Text button'),
         Row(
           children: [
             TextButton(
               onPressed: () {},
-              child: Text('Button'),
+              child: const Text('Button'),
             ),
             const SizedBox(width: 8),
             TextButton.icon(
               onPressed: () {},
-              label: Text('Button with icon'),
-              icon: Icon(Icons.add_box_rounded),
+              label: const Text('Button with icon'),
+              icon: const Icon(Icons.add_box_rounded),
             ),
           ],
         ),
         Row(
           children: [
-            TextButton(
+            const TextButton(
               onPressed: null,
               child: Text('Disabled'),
             ),
             const SizedBox(width: 8),
             TextButton.icon(
               onPressed: null,
-              label: Text('Disabled with icon'),
-              icon: Icon(Icons.add_box_rounded),
+              label: const Text('Disabled with icon'),
+              icon: const Icon(Icons.add_box_rounded),
             ),
           ],
         ),
-        Text('Icon button'),
+        const Text('Icon button'),
         Row(
           children: [
             IconButton(
-              icon: Icon(Icons.add_box_rounded),
+              icon: const Icon(Icons.add_box_rounded),
               onPressed: () {},
               tooltip: 'Button',
             ),
-            IconButton(
+            const IconButton(
               icon: Icon(Icons.add_box_rounded),
               onPressed: null,
               tooltip: 'Disabled',
             ),
           ],
         ),
-        Text('Dropdown button'),
+        const Text('Dropdown button'),
         Row(
           children: [
             SizedBox(
               width: 200,
               child: DropdownButton<String>(
-                items: [
+                items: const [
                   DropdownMenuItem(
-                    child: Text('Hello'),
                     value: 'Hello',
+                    child: Text('Hello'),
                   ),
                   DropdownMenuItem(
-                    child: Text('There'),
                     value: 'There',
+                    child: Text('There'),
                   ),
                 ],
                 onChanged: (val) {},
                 isExpanded: true,
-                hint: Text('Dropdown hint'),
+                hint: const Text('Dropdown hint'),
               ),
             ),
           ],
@@ -144,14 +144,14 @@ class ButtonsPreviewTab extends StatelessWidget implements PreviewTab {
             SizedBox(
               width: 200,
               child: DropdownButton<String>(
-                items: [
+                items: const [
                   DropdownMenuItem(
-                    child: Text('Hello'),
                     value: 'Hello',
+                    child: Text('Hello'),
                   ),
                   DropdownMenuItem(
-                    child: Text('There'),
                     value: 'There',
+                    child: Text('There'),
                   ),
                 ],
                 onChanged: (val) {},
@@ -166,23 +166,23 @@ class ButtonsPreviewTab extends StatelessWidget implements PreviewTab {
             SizedBox(
               width: 200,
               child: DropdownButton<String>(
-                items: [
+                items: const [
                   DropdownMenuItem(
-                    child: Text('Hello'),
                     value: 'Hello',
+                    child: Text('Hello'),
                   ),
                   DropdownMenuItem(
-                    child: Text('There'),
                     value: 'There',
+                    child: Text('There'),
                   ),
                 ],
                 isExpanded: true,
-                hint: Text('Disabled'),
+                hint: const Text('Disabled'),
               ),
             ),
           ],
         ),
-        Text('Popup menu button'),
+        const Text('Popup menu button'),
         PopupMenuButton(
           initialValue: 'harder',
           itemBuilder: (context) => [
@@ -204,60 +204,60 @@ class ButtonsPreviewTab extends StatelessWidget implements PreviewTab {
             ),
           ],
         ),
-        Text('Toggle buttons'),
+        const Text('Toggle buttons'),
         ToggleButtons(
           onPressed: (val) {},
           renderBorder: false,
-          children: [
-            Icon(Icons.format_bold),
-            Icon(Icons.format_italic),
-            Icon(Icons.format_underline),
-          ],
-          isSelected: [
+          isSelected: const [
             false,
             true,
             false,
+          ],
+          children: const [
+            Icon(Icons.format_bold),
+            Icon(Icons.format_italic),
+            Icon(Icons.format_underline),
           ],
         ),
         const SizedBox(height: 4),
         ToggleButtons(
           renderBorder: false,
-          children: [
-            Icon(Icons.format_bold),
-            Icon(Icons.format_italic),
-            Icon(Icons.format_underline),
-          ],
-          isSelected: [
+          isSelected: const [
             false,
             true,
             false,
+          ],
+          children: const [
+            Icon(Icons.format_bold),
+            Icon(Icons.format_italic),
+            Icon(Icons.format_underline),
           ],
         ),
         const SizedBox(height: 4),
         ToggleButtons(
           onPressed: (val) {},
-          children: [
-            Icon(Icons.format_bold),
-            Icon(Icons.format_italic),
-            Icon(Icons.format_underline),
-          ],
-          isSelected: [
+          isSelected: const [
             false,
             true,
             false,
+          ],
+          children: const [
+            Icon(Icons.format_bold),
+            Icon(Icons.format_italic),
+            Icon(Icons.format_underline),
           ],
         ),
         const SizedBox(height: 4),
         ToggleButtons(
-          children: [
-            Icon(Icons.format_bold),
-            Icon(Icons.format_italic),
-            Icon(Icons.format_underline),
-          ],
-          isSelected: [
+          isSelected: const [
             false,
             true,
             false,
+          ],
+          children: const [
+            Icon(Icons.format_bold),
+            Icon(Icons.format_italic),
+            Icon(Icons.format_underline),
           ],
         ),
       ],

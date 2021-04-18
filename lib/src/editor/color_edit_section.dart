@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:theme_customizer/src/editor/components/color_picker_field.dart';
 
 import '../custom_theme.dart';
+import 'components/color_picker_field.dart';
 import 'edit_section.dart';
 
 class ColorEditSection implements EditSection {

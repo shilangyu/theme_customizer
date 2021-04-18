@@ -12,27 +12,27 @@ class IndicatorsPreviewTab extends StatelessWidget implements PreviewTab {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       children: [
-        Text('Linear progress'),
+        const Text('Linear progress'),
         const SizedBox(height: 4),
-        LinearProgressIndicator(),
+        const LinearProgressIndicator(),
         const SizedBox(height: 12),
-        Text('Circular progress'),
+        const Text('Circular progress'),
         const SizedBox(height: 4),
-        Center(child: CircularProgressIndicator()),
-        Text('Snackbar'),
+        const Center(child: CircularProgressIndicator()),
+        const Text('Snackbar'),
         ElevatedButton(
           onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text('Yes hello'),
+              content: const Text('Yes hello'),
               action: SnackBarAction(
                 label: 'Undo',
                 onPressed: () {},
               ),
             ),
           ),
-          child: Text('Show snackbar'),
+          child: const Text('Show snackbar'),
         ),
       ],
     );

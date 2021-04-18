@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:theme_customizer/src/editor/color_edit_section.dart';
-import 'package:theme_customizer/src/editor/edit_section.dart';
-import 'package:theme_customizer/src/preview/buttons_preview_tab.dart';
-import 'package:theme_customizer/src/preview/controls_preview_tab.dart';
-import 'package:theme_customizer/src/preview/indicators_preview_tab.dart';
-import 'package:theme_customizer/src/preview/inputs_preview_tab.dart';
-import 'package:theme_customizer/src/preview/popups_preview_tab.dart';
-import 'package:theme_customizer/src/preview/preview_tab.dart';
 
 import 'custom_theme.dart';
+import 'editor/color_edit_section.dart';
+import 'editor/edit_section.dart';
+import 'preview/buttons_preview_tab.dart';
+import 'preview/controls_preview_tab.dart';
+import 'preview/indicators_preview_tab.dart';
+import 'preview/inputs_preview_tab.dart';
+import 'preview/popups_preview_tab.dart';
+import 'preview/preview_tab.dart';
 
 /// pops the navigator stack with [CustomTheme]
 class CustomThemePicker extends StatelessWidget {
@@ -45,14 +45,14 @@ class CustomThemePicker extends StatelessWidget {
                   leading: Builder(
                     builder: (context) {
                       return IconButton(
-                        icon: Icon(Icons.palette),
+                        icon: const Icon(Icons.palette),
                         onPressed: () => Scaffold.of(context).openDrawer(),
                       );
                     },
                   ),
                   actions: [
                     IconButton(
-                      icon: Icon(Icons.save),
+                      icon: const Icon(Icons.save),
                       onPressed: () => Navigator.of(context).pop(customTheme),
                     ),
                   ],
@@ -106,7 +106,7 @@ class CustomThemePicker extends StatelessWidget {
                     FloatingActionButtonLocation.endDocked,
                 floatingActionButton: FloatingActionButton(
                   onPressed: () {},
-                  child: Icon(Icons.add),
+                  child: const Icon(Icons.add),
                 ),
               ),
             ),

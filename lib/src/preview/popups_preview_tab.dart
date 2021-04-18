@@ -12,7 +12,7 @@ class PopupsPreviewTab extends StatelessWidget implements PreviewTab {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       children: [
         ElevatedButton(
           onPressed: () {
@@ -20,10 +20,10 @@ class PopupsPreviewTab extends StatelessWidget implements PreviewTab {
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  title: Text('AlertDialog Title'),
+                  title: const Text('AlertDialog Title'),
                   content: SingleChildScrollView(
                     child: ListBody(
-                      children: [
+                      children: const [
                         Text('This is a demo alert dialog.'),
                         Text('Would you like to approve of this message?'),
                       ],
@@ -31,17 +31,17 @@ class PopupsPreviewTab extends StatelessWidget implements PreviewTab {
                   ),
                   actions: [
                     TextButton(
-                      child: Text('Approve'),
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
+                      child: const Text('Approve'),
                     ),
                   ],
                 );
               },
             );
           },
-          child: Text('Open a alert dialog'),
+          child: const Text('Open a alert dialog'),
         ),
         ElevatedButton(
           onPressed: () {
@@ -68,7 +68,7 @@ class PopupsPreviewTab extends StatelessWidget implements PreviewTab {
               },
             );
           },
-          child: Text('Open a simple dialog'),
+          child: const Text('Open a simple dialog'),
         ),
         ElevatedButton(
           onPressed: () {
@@ -77,7 +77,7 @@ class PopupsPreviewTab extends StatelessWidget implements PreviewTab {
               builder: (context) {
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
+                  children: const [
                     Text('hello'),
                     Text('there'),
                   ],
@@ -85,19 +85,19 @@ class PopupsPreviewTab extends StatelessWidget implements PreviewTab {
               },
             );
           },
-          child: Text('Open modal bottom sheet'),
+          child: const Text('Open modal bottom sheet'),
         ),
         ElevatedButton(
           onPressed: () {
             showBottomSheet<void>(
               context: context,
               builder: (context) {
-                return Container(
+                return SizedBox(
                   height: 200,
                   child: Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: <Widget>[
+                      children: const [
                         Text('hello'),
                         Text('there'),
                       ],
@@ -107,7 +107,7 @@ class PopupsPreviewTab extends StatelessWidget implements PreviewTab {
               },
             );
           },
-          child: Text('Open bottom sheet'),
+          child: const Text('Open bottom sheet'),
         ),
       ],
     );

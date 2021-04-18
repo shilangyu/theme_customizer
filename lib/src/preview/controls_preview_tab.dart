@@ -12,16 +12,16 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       children: [
-        Text('Checkbox'),
+        const Text('Checkbox'),
         Row(
           children: [
             Checkbox(
               value: true,
               onChanged: (val) {},
             ),
-            Text('Checked')
+            const Text('Checked')
           ],
         ),
         Row(
@@ -30,7 +30,7 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
               value: false,
               onChanged: (val) {},
             ),
-            Text('Unchecked')
+            const Text('Unchecked')
           ],
         ),
         Row(
@@ -40,11 +40,11 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
               onChanged: (val) {},
               tristate: true,
             ),
-            Text('Undecided')
+            const Text('Undecided')
           ],
         ),
         Row(
-          children: [
+          children: const [
             Checkbox(
               value: true,
               onChanged: null,
@@ -53,7 +53,7 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
           ],
         ),
         Row(
-          children: [
+          children: const [
             Checkbox(
               value: false,
               onChanged: null,
@@ -62,7 +62,7 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
           ],
         ),
         Row(
-          children: [
+          children: const [
             Checkbox(
               value: null,
               onChanged: null,
@@ -71,14 +71,14 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
             Text('Disabled undecided')
           ],
         ),
-        Text('Switch'),
+        const Text('Switch'),
         Row(
           children: [
             Switch(
               value: true,
               onChanged: (val) {},
             ),
-            Text('Selected')
+            const Text('Selected')
           ],
         ),
         Row(
@@ -87,11 +87,11 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
               value: false,
               onChanged: (val) {},
             ),
-            Text('Unselected')
+            const Text('Unselected')
           ],
         ),
         Row(
-          children: [
+          children: const [
             Switch(
               value: true,
               onChanged: null,
@@ -100,7 +100,7 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
           ],
         ),
         Row(
-          children: [
+          children: const [
             Switch(
               value: false,
               onChanged: null,
@@ -108,7 +108,7 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
             Text('Disabled unselected')
           ],
         ),
-        Text('Radio'),
+        const Text('Radio'),
         Row(
           children: [
             Radio<int>(
@@ -116,7 +116,7 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
               value: 1,
               onChanged: (val) {},
             ),
-            Text('Picked')
+            const Text('Picked')
           ],
         ),
         Row(
@@ -126,11 +126,11 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
               value: 1,
               onChanged: (val) {},
             ),
-            Text('Not picked')
+            const Text('Not picked')
           ],
         ),
         Row(
-          children: [
+          children: const [
             Radio<int>(
               groupValue: 1,
               value: 1,
@@ -140,7 +140,7 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
           ],
         ),
         Row(
-          children: [
+          children: const [
             Radio<int>(
               groupValue: 0,
               value: 1,
@@ -149,12 +149,12 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
             Text('Disabled not picked')
           ],
         ),
-        Text('Slider'),
+        const Text('Slider'),
         Slider(
           value: 0.75,
           onChanged: (val) {},
         ),
-        Slider(
+        const Slider(
           value: 0.75,
           onChanged: null,
         ),
@@ -164,7 +164,7 @@ class ControlsPreviewTab extends StatelessWidget implements PreviewTab {
           divisions: 5,
           onChanged: (val) {},
         ),
-        Slider(
+        const Slider(
           value: 0.75,
           label: 'label',
           divisions: 5,
